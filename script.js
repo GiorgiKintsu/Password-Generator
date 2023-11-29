@@ -63,13 +63,16 @@ function generatePassword(){
     let password = "";
     for(let i = 0; i < passwordLength; i++){
         let randomNum = Math.floor(Math.random() * charsForPassword.length);
-        password += charsForPassword[randomNum]
+        if (charsForPassword.length > 0) {
+            password += charsForPassword[randomNum]
+        }
+        
     }
 
     passwordResult.value = password
     passwordCopiedOrNot.style.display = "";
     if (charsForPassword.length === 0) {
-        alert("empty inputs")
+        alert("empty inputs");
     }
 }
 
