@@ -39,6 +39,7 @@ function sliderValue(){
         generateBtn.style.background = "";
         generateBtn.style.color = "";
     }
+    passwordCopiedOrNot.style.display = "";
 }
 slider.addEventListener("input", sliderValue);
 
@@ -157,13 +158,15 @@ let passwordCopiedOrNot = document.querySelector(".resultSide div h6");
 
 
 function copyText(){
-    let copyElement = document.getElementById("passwordResult");
-    let tempInput = document.createElement("input");
-    tempInput.value = copyElement.value;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    tempInput.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-    passwordCopiedOrNot.style.display = "block";
+    if (passwordLength > 0) {
+        let copyElement = document.getElementById("passwordResult");
+        let tempInput = document.createElement("input");
+        tempInput.value = copyElement.value;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        passwordCopiedOrNot.style.display = "block";
+    }
 }   
