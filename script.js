@@ -158,7 +158,7 @@ let passwordCopiedOrNot = document.querySelector(".resultSide div h6");
 
 
 function copyText(){
-    if (passwordLength > 0) {
+    if (passwordResult.value.length > 0) {
         let copyElement = document.getElementById("passwordResult");
         let tempInput = document.createElement("input");
         tempInput.value = copyElement.value;
