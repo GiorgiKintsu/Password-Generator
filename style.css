@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root{
+    --primaryFont:'JetBrains Mono', monospace;
+    --veryDarkGrey: #18171F;
+    --DarkGrey: #24232C;
+    --grey: #817D92;
+    --almostWhite: #E6E5EA;
+    --neonGreen: #A4FFAF;
+}
+.includesSide .container,
+.primarySizeFontColor{
+    font-family: var(--primaryFont);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 23.76px;
+    letter-spacing: 0px;
+}
+.flexSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flexAlignCenter{
+    display: flex;
+    align-items: center;
+}
+
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #08070B;
+}
+.title{
+    font-size: 1.5rem;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: var(--grey);
+    margin-bottom: 31px;
+}
+
+
+
+.passwordGenerator{
+    width: 540px;
+    height: 632px;
+    background-color: var(--DarkGrey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.passwordGenerator aside,
+.passwordGenerator .mainSide, aside,
+.passwordGenerator button{
+    width: 476px;
+}
+
+
+
+
+
+.resultSide{
+    height: 80px;
+}
+.resultSide #passwordResult{
+    width: 92%;
+    background-color: var(--DarkGrey);
+    font-family: var(--primaryFont);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 42px;
+    color: var(--almostWhite);
+    border-width: 0px;
+}
+.resultSide #passwordResult:focus{
+    outline: none;
+}
+.resultSide #passwordResult::placeholder{
+    opacity: 25%;
+}
+.resultSide div{
+    gap: 16px;
+}
+.resultSide div h6{
+    text-transform: uppercase;
+    color: var(--neonGreen);
+    display: none;
+}
+.resultSide div label i{
+    font-size: 1.375rem;
+    color: var(--neonGreen);
+    cursor: pointer;
+}
+
+
+
+
+
+.passwordGenerator .emptySpace{
+    width: 100%;
+    height: 24px;
+    background-color: #08070B;
+}
+.passwordGenerator .mainSide{
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+
+.characterLengthSide{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+.characterLengthSide div h4{
+    text-transform: capitalize;
+    color: var(--almostWhite);
+}
+.characterLengthSide div h3{
+    font-family: var(--primaryFont);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 42px;
+    color: var(--neonGreen);
+}
+.characterLengthSide #slider{
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, var(--neonGreen)0%, var(--veryDarkGrey)0%);
+}
+.characterLengthSide #slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--almostWhite);
+    cursor: pointer;
+}
+.characterLengthSide #slider::-webkit-slider-thumb:hover{
+    border: 1px solid var(--neonGreen);
+    background-color: var(--veryDarkGrey);
+}
+.includesSide{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.includesSide .container{
+    display: block;
+    position: relative;
+    padding-left: 44px;
+    margin-bottom: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-transform: capitalize;
+    color: var(--almostWhite);
+}
+.includesSide .container input{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.includesSide .container .customCheckbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--almostWhite);
+    background-color: var(--DarkGrey);
+    cursor: pointer;
+}
+.includesSide .container .customCheckbox:hover{
+    border: 2px solid #A4FFAF;
+}
+.includesSide .container input:checked ~ .customCheckbox{
+    background-color: #a4ffaf;
+    border: 2px solid #a4ffaf;
+}
+.includesSide .container .customCheckbox:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.includesSide .container input:checked ~ .customCheckbox:after{
+    display: block;
+}
+.container .customCheckbox:after{
+    left: 4px;
+    top: 0px;
+    width: 8px;
+    height: 11px;
+    border: solid #18171f;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);  
+}
+
+
+.strengthSide{
+    height: 72px;
+    background-color: var(--veryDarkGrey);
+}
+.strengthSide h4{
+    text-transform: uppercase;
+    color: var(--grey);
+    padding-left: 32px;
+}
+.strengthSide div{
+    gap: 15.5px;
+}
+.strengthSide div h3{
+    font-family: var(--primaryFont);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--almostWhite);
+}
+.strengthSide div .boxesParent{
+    gap: 8px;
+    padding-right: 32px;
+}
+.strengthSide div .boxesParent div{
+    width: 10px;
+    height: 28px;
+    border: 1px solid var(--almostWhite);
+}
+
+
+
+button{
+    width: 476px;
+    height: 65px;
+    border: 2px solid var(--neonGreen);
+    background-color: var(--neonGreen);
+    outline: none;
+    cursor: pointer;
+    
+    text-transform: uppercase;
+    color: var(--DarkGrey);
+}
+button i{
+    margin-left: 24px;
+    font-size: 11px;
+}

@@ -1,0 +1,70 @@
+@media only screen and (max-width: 700px){
+    .title{
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+    .passwordGenerator{
+        width: 343px;
+        height: 540px;
+    }
+    .passwordGenerator aside,
+    .passwordGenerator .mainSide, aside,
+    .passwordGenerator button{
+        width: 311px;
+    }
+    .resultSide{
+        height: 64px;
+    }
+    .resultSide #passwordResult{
+        font-size: 1.5rem;
+        line-height: 31.68px;
+    }
+    .resultSide div h4{
+        font-size: 1rem;
+    }
+    .resultSide div label i{
+        font-size: 1.063rem;
+    }
+    .passwordGenerator .emptySpace{
+        width: 343px;
+        height: 16px;
+    }
+    .passwordGenerator .mainSide{
+        padding-top: 16px;
+        gap: 16px;
+    }
+    .characterLengthSide{
+        gap: 16px;
+    }
+    .characterLengthSide div h4{
+        font-size: 1rem;
+    }
+    .characterLengthSide div h3{
+        font-size: 1.5rem;
+    }
+    .includesSide{
+        margin-top: 32px;
+        gap: 16px;
+    }
+    .includesSide .container{
+        padding-left: 36px;
+        font-size: 1rem;
+    }
+    .strengthSide{
+        margin-top: 16px;
+        height: 56px;
+    }
+    .strengthSide h4{
+        font-size: 1rem;
+    }
+    .strengthSide div h3{
+        font-size: 1rem;
+    }
+    .strengthSide div .boxesParent{
+        padding-right: 16px;
+    }
+    button{
+        height: 56px;
+        font-size: 1rem;
+    }
+}

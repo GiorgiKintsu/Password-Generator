@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <script src="https://kit.fontawesome.com/fc05d35461.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer ></script>
+</head>
+<body>
+    <h1 class="title primarySizeFontColor" >Password Generator</h1>
+    <div class="passwordGenerator">
+        <aside class="resultSide flexSpaceBetween">
+
+            <input type="text" id="passwordResult" placeholder="P4$5W0rD!">
+            <div class="flexAlignCenter">
+                <h6 class="primarySizeFontColor">copied</h6>
+                <label for="passwordResult" onclick="copyText()">
+                    <i class="fa-regular fa-copy"></i>
+                </label>
+            </div>
+
+        </aside>
+
+        <div class="emptySpace"></div>
+
+        <aside class="mainSide">
+
+            <aside class="characterLengthSide">
+                <div class="flexSpaceBetween">
+                    <h4 class="primarySizeFontColor">Character Length</h4>
+                    <h3>0</h3>
+                </div>
+                <input type="range" value="0" id="slider" oninput="charaCterLength(this)">
+            </aside>
+
+
+            <aside class="includesSide">
+                <label class="container" for="upperCase">
+                    <input type="checkbox" id="upperCase">
+                    <span class="customCheckbox"></span>
+                    Include Uppercase Letters
+                </label>
+                <label class="container" for="lowerCase">
+                    <input type="checkbox" id="lowerCase">
+                    <span class="customCheckbox"></span>
+                    Include lowercase Letters
+                </label>
+                <label class="container" for="numbers">
+                    <input type="checkbox" id="numbers">
+                    <span class="customCheckbox"></span>
+                    Include Numbers
+                </label>
+                <label class="container" for="symbols">
+                    <input type="checkbox" id="symbols">
+                    <span class="customCheckbox"></span>
+                    Include Symbols
+                </label>
+            </aside>
+
+
+            <aside class="strengthSide flexSpaceBetween">
+                <h4 class="primarySizeFontColor">strength</h4>
+                <div class="flexAlignCenter">
+                    <h3 id="passwordRate"></h3>
+                    <div class="boxesParent flexAlignCenter">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                        <div class="box3"></div>
+                        <div class="box4"></div>
+                    </div>
+                </div>    
+            </aside>
+
+
+            <button class="primarySizeFontColor" onclick="generatePassword()">
+                Generate
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </aside>
+    </div>
+</body>
+</html>
